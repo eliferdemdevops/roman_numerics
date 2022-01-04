@@ -2,6 +2,7 @@
 
 The topics for this hands-on session will be AWS Lambda, function as a service (FaaS). During this Playground you will create a website hosted on AWS S3 using AWS Lambda and Amazon API Gateway to add dynamic functionality to the site.
 
+
 ## Learning Outcomes
 
 At the end of the this hands-on training, students will be able to;
