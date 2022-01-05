@@ -1,5 +1,6 @@
 ## Part 1 - Creating a Certificate 
 
+
 - Go to Certificate Manager service and select "Provision Certificates" ----> "Get Started"
 
 - Click on "Request a public certificate" and hit the "Request Certificate"
