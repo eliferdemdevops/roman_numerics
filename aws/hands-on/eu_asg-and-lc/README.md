@@ -1,3 +1,4 @@
+
 # Hands-on EC2-07 : Configuring Application Load Balancer (ALB) with Auto Scaling Group (ASG) using Launch Configuration
 
 Purpose of the this hands-on training is to give the students basic knowledge of how to configure AWS Load Balancers with Auto Scaling Group and Launch Configuration.
