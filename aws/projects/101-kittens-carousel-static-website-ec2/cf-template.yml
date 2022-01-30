@@ -29,7 +29,20 @@ WebserverHost:
     UserData: 
       Fn::Base64:
         !Sub |
-        
-      Volumes:
-        - Volume
+          #! /bin/bash
+          yum update -y
+          yum install httpd -y
+          cd /var/www/html/
+          wget https://raw.githubusercontent.com/eliferdemdevops/static-web-kitten/main/index.html
+          wget https://raw.githubusercontent.com/eliferdemdevops/static-web-kitten/main/cat0.jpg
+          wget https://raw.githubusercontent.com/eliferdemdevops/static-web-kitten/main/cat1.jpg
+          wget https://raw.githubusercontent.com/eliferdemdevops/static-web-kitten/main/cat2.jpg
+          systemctl start httpd
+          systemctl enable httpd
     
+Outputs:
+  WebsiteURL:
+    Value: !Sub
+      -  http://${PublicAddress}
+      -  PublicAddress: !GetAtt WebserverHost.PublicDnsName
+    Description: Kittens Carousel Application URL

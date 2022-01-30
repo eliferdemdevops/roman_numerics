@@ -59,7 +59,9 @@ docker-compose --version
 
 - Create a folder for the project:
   
-```bash
+```bashimport time
+
+import redis
 mkdir composetest
 cd composetest
 ```
@@ -67,9 +69,7 @@ cd composetest
 - Create a file called `app.py` in your project folder and paste the following python code in it. In this example, the application uses the Flask framework and maintains a hit counter in Redis, and  `redis` is the hostname of the `Redis container` on the application’s network. We use the default port for Redis, `6379`.
 
 ```python
-import time
 
-import redis
 from flask import Flask
 
 app = Flask(__name__)
@@ -91,7 +91,7 @@ def get_hit_count():
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return 'Hello World! I have been seen {} times.\n'.format(count)
+    return 'Hello World! I have been seen {doc} times.\n'.format(count)
 ```
 
 - Create another file called `requirements.txt` in your project folder, add `flask` and `redis` as package list.
